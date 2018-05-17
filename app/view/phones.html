@@ -16,11 +16,14 @@
         <div class="col-md-10">
             <ul class="phones">
                 <li ng-repeat="phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp">
-                    <span>{{phone.name}}</span>
+                    <a href="img/phones/{{phone.id}}" class="thumb">
+                        <img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}">
+                    </a>
+                    <a href="img/phones/{{phone.id}}">{{phone.name}}</a>
                     <p>{{phone.snippet}}</p>
                 </li>
             </ul>
         </div>
     </div>
-    <pre>{{$ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp | json}}</pre>
+    <!--<pre>{{$ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp | json}}</pre>-->
 </div>
