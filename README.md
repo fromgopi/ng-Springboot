@@ -1,41 +1,16 @@
-# `angular-seed` — the seed for AngularJS apps
+# `Simple AngularJs App`
 
-This project is an application skeleton for a typical [AngularJS][angularjs] web app. You can use it
-to quickly bootstrap your angular webapp projects and dev environment for these projects.
+This is a Simple web application devloped using Angularjs as front end and Spring boot and MongoDb as Rest and data stores.
 
-The seed contains a sample AngularJS application and is preconfigured to install the Angular
-framework and a bunch of development and testing tools for instant web development gratification.
+### Clone `ng-Springboot`
 
-The seed app doesn't do much, just shows how to wire two controllers and views together.
-
-
-## Getting Started
-
-To get you started you can simply clone the `angular-seed` repository and install the dependencies:
-
-### Prerequisites
-
-You need git to clone the `angular-seed` repository. You can get git from [here][git].
-
-We also use a number of Node.js tools to initialize and test `angular-seed`. You must have Node.js
-and its package manager (npm) installed. You can get them from [here][node].
-
-### Clone `angular-seed`
-
-Clone the `angular-seed` repository using git:
+Clone the `ng-Springboot` repository using git:
 
 ```
-git clone https://github.com/angular/angular-seed.git
-cd angular-seed
+git clone git@github.com:fromgopi/ng-Springboot.git
+cd ng-Springboot
 ```
 
-If you just want to start a new project without the `angular-seed` commit history then you can do:
-
-```
-git clone --depth=1 https://github.com/angular/angular-seed.git <your-project-name>
-```
-
-The `depth=1` tells git to only pull down one commit worth of historical data.
 
 ### Install Dependencies
 
@@ -61,7 +36,7 @@ two new folders in your project.
 * `app/bower_components` - contains the Angular framework files
 
 *Note that the `bower_components` folder would normally be installed in the root folder but
-`angular-seed` changes this location through the `.bowerrc` file. Putting it in the `app` folder
+`ng-Springboot` changes this location through the `.bowerrc` file. Putting it in the `app` folder
 makes it easier to serve the files by a web server.*
 
 ### Run the Application
@@ -82,24 +57,13 @@ Now browse to the app at [`localhost:8000/index.html`][local-app-url].
 app/                    --> all of the source files for the application
   app.css               --> default stylesheet
   components/           --> all app specific modules
-    version/              --> version related components
-      version.js                 --> version module declaration and basic "version" value service
-      version_test.js            --> "version" value service tests
-      version-directive.js       --> custom directive that returns the current app version
-      version-directive_test.js  --> version directive tests
-      interpolate-filter.js      --> custom interpolation filter
-      interpolate-filter_test.js --> interpolate filter tests
-  view1/                --> the view1 view template and logic
-    view1.html            --> the partial template
-    view1.js              --> the controller logic
-    view1_test.js         --> tests of the controller
-  view2/                --> the view2 view template and logic
-    view2.html            --> the partial template
-    view2.js              --> the controller logic
-    view2_test.js         --> tests of the controller
+    sample_component.js --> this is the sample component that glues view and controller.
+  view/                --> the view1 view template and logic
+    sample.html        --> the partial template 
+  controller/
+    SampleController.js --> this is the sample controller.
   app.js                --> main application module
   index.html            --> app layout file (the main html template file of the app)
-  index-async.html      --> just like index.html, but loads js files asynchronously
 karma.conf.js         --> config file for running unit tests with Karma
 e2e-tests/            --> end-to-end tests
   protractor-conf.js    --> Protractor config file
@@ -109,11 +73,11 @@ e2e-tests/            --> end-to-end tests
 
 ## Testing
 
-There are two kinds of tests in the `angular-seed` application: Unit tests and end-to-end tests.
+There are two kinds of tests in the `ng-Springboot` application: Unit tests and end-to-end tests.
 
 ### Running Unit Tests
 
-The `angular-seed` app comes preconfigured with unit tests. These are written in [Jasmine][jasmine],
+The `ng-Springboot` app comes preconfigured with unit tests. These are written in [Jasmine][jasmine],
 which we run with the [Karma][karma] test runner. We provide a Karma configuration file to run them.
 
 * The configuration is found at `karma.conf.js`.
@@ -205,7 +169,7 @@ respectively.
 
 ## Loading Angular Asynchronously
 
-The `angular-seed` project supports loading the framework and application scripts asynchronously.
+The `ng-Springboot` project supports loading the framework and application scripts asynchronously.
 The special `index-async.html` is designed to support this style of loading. For it to work you must
 inject a piece of Angular JavaScript into the HTML page. The project has a predefined script to help
 do this:
@@ -228,7 +192,7 @@ etc to function properly when an HTML page is opened via the `file://` scheme in
 
 ### Running the App during Development
 
-The `angular-seed` project comes preconfigured with a local development web server. It is a Node.js
+The `ng-Springboot` project comes preconfigured with a local development web server. It is a Node.js
 tool called [http-server][http-server]. You can start this web server with `npm start`, but you may
 choose to install the tool globally:
 
