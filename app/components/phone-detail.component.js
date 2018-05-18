@@ -1,6 +1,6 @@
 var app = angular.module('phonecatApp');
 
-app.component('PhoneDetails', {
+app.component('phoneDetails', {
     templateUrl: 'view/phones/phoneDetails.html',
     controller: 'PhoneDetailsController'
 });
