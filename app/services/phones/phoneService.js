@@ -1,11 +1,14 @@
 var app = angular.module('phonecatApp.service', []);
 
-app.factory('Phone', ['$resource', function ($resource) {
-    return $resource('phone/:phoneId.json', {}, {
-        query: {
-            method: 'GET',
-            params: {phoneId: 'phones'},
-            isArray: true
-        }
-    })
+app.factory('Phone', ['$http', function ($http) {
+    var phoneData = {};
+    var URL = window.location.origin;
+
+    phoneData.getAllPhones = function () {
+        return $http({
+           method: 'GET',
+           url: URL+'data/phones/phones.json'
+        });
+    }
+
 }]);
