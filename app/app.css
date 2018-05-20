@@ -23,3 +23,17 @@
   content: "|";
   padding-right: 0.3em;
 }
+
+.phone-thumbs {
+  list-style: none;
+  margin: 0;
+}
+
+.phone-images {
+  background-color: white;
+  float: left;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+  width: 450px;
+}
