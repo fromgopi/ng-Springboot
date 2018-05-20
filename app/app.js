@@ -1,4 +1,4 @@
-var app = angular.module('phonecatApp', ['ngRoute']);
+var app = angular.module('phonecatApp', ['ngRoute', 'ngResource', 'phonecatApp.service']);
 
 app.config(['$locationProvider','$routeProvider', function ($locationProvider, $routerProvider) {
 
@@ -8,8 +8,8 @@ app.config(['$locationProvider','$routeProvider', function ($locationProvider, $
         .when('/', {
             templateUrl: 'view/viewIndex.html'
         })
-        .when('/phone',{
-            template: '<h1>This is simple /phone...</h1>'
+        .when('/phone/:phoneId',{
+            template: '<phone-details></phone-details>'
         });
 
     $locationProvider.html5Mode(true);

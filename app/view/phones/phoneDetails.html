@@ -1,3 +1,12 @@
-<div class="container-fluid">
-    TBD: Detail view for <span>{{$ctrl.phoneId}}</span>
+<div class="phone-images">
+    <img src="{{$ctrl.phoneDet.images[0]}}" class="phone" />
 </div>
+
+<h1>{{$ctrl.phoneDet.name}}</h1>
+<p>{{$ctrl.phoneDet.description}}</p>
+
+<ul class="phone-thumbs">
+    <li ng-repeat="img in $ctrl.phoneDet.images">
+        <img ng-src="{{img}}">
+    </li>
+</ul>
