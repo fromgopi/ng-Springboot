@@ -1,6 +1,6 @@
 var app = angular.module('phonecatApp');
 
-app.controller('phoneListController', ['$scope','$http', 'phoneFactory', function ($scope, $http, phoneFactory) {
+app.controller('phoneListController', ['$scope', 'phoneFactory', function ($scope, phoneFactory) {
     var self = this;
     self.orderProp = 'age';
 

@@ -11,6 +11,12 @@ app.factory('phoneFactory', ['$http', function ($http) {
         });
     }
 
+    phoneData.getPhoneDetails = function (phoneId) {
+        return $http({
+            method: 'GET',
+            url: URL+'/data/phones/'+phoneId+'.json'
+        });
+    }
     return phoneData;
 
 }]);
