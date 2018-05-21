@@ -1,11 +1,11 @@
 var app = angular.module('phonecatApp');
 
-app.controller('phoneListController', ['$scope','$http', function ($scope, $http, Phone) {
+app.controller('phoneListController', ['$scope','$http', 'phoneFactory', function ($scope, $http, phoneFactory) {
     var self = this;
     self.orderProp = 'age';
-    self.phones = Phone.getAllPhones();
-    /*$http.get('data/phones/phones.json').then(function(response) {
-        self.phones = response.data;
-    });*/
-    console.log(self.orderProp);
+
+    console.log(phoneFactory.getAllPhones());
+    phoneFactory.getAllPhones().success(function (response) {
+        self.phones = response;
+    });
 }]);
